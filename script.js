@@ -114,17 +114,17 @@ function sumArray(numbers) {
     let acc = 0; // Inizializza l'accumulatore a 0
 
     // Itera attraverso tutti gli elementi dell'array
-    for (let num of numbers) {
-        acc += num; // Aggiunge il valore corrente all'accumulatore
+    for (let ciclo of numbers) {
+        acc += ciclo; // Aggiunge il valore corrente all'accumulatore
     }
 
     return acc; // Restituisce la somma totale
 }
 
 // Esempi di utilizzo
-console.log(sumArray([1, 2, 3, 4, 5])); // 15
-console.log(sumArray([10, -2, 8, 4])); // 20
-console.log(sumArray([])); // 0
+console.log(sumArray([1, 2, 3, 4, 5])); 
+console.log(sumArray([10, -2, 8, 4]));
+console.log(sumArray([])); 
 
 /* 6 crea una funzione che controlli che un array NON contenga i numeri 1 o 3. se non li contiene ritorna 'true', altrimenti ritorna 'false'. */
 
@@ -151,7 +151,7 @@ console.log(checkArray([1, 2, 3, 4])); // false
 console.log(checkArray([7, 8, 9])); // true
 console.log(checkArray([3, 6, 9])); // false
 
-// esercizio 6
+// esercizio 7 crea una funzione per trovare il tipo di un angolo i cui gradi sono passati come parametro.
 
 /*
     Determina il tipo di angolo in base ai gradi forniti.
@@ -186,9 +186,9 @@ console.log(getAngleType(120)); // "ottuso"
 console.log(getAngleType(180)); // "piatto"
 console.log(getAngleType(200)); // "Angolo non supportato"
 
-// esercizio 7
+// esercizio 8 crea una funzione che crei un acronimo a partire da una frase
 /*
-    Crea un acronimo a partire da una frase.
+   
     
     Parametri:
     - phrase: Una stringa contenente più parole.
@@ -198,9 +198,9 @@ console.log(getAngleType(200)); // "Angolo non supportato"
 */
 function createAcronym(phrase) {
     return phrase
-        .split(" ") // Divide la frase in parole
+        .split(" ") // Divide la stringa con la frase all interno in un array di parole
         .map(word => word[0].toUpperCase()) // Prende la prima lettera di ogni parola e la converte in maiuscolo
-        .join(""); // Unisce le lettere in una stringa
+        .join(""); // Unisce le lettere in una stringa*/
 }
 
 // Esempi di utilizzo
@@ -209,7 +209,7 @@ console.log(createAcronym("national aeronautics space administration")); // "NAS
 console.log(createAcronym("hyper text markup language")); // "HTML"
 
 
-// EXTRA
+// EXTRA 
 
 
 // 1. Partendo da una stringa (passata come parametro), ritorna il carattere più usato nella stringa stessa.
@@ -324,7 +324,7 @@ console.log(isPalindrome("12321")); // true
 
 
 
-/* esercizio extra 5
+/* esercizio extra 5 Partendo da un numero intero (dai parametri) ritorna un numero che contenga le stesse cifre, ma in ordine contrario. Es. 189 ⇒ 981
     Inverte l'ordine delle cifre di un numero intero.
     
     Parametri:
@@ -341,10 +341,28 @@ function reverseNumber(num) {
     return num < 0 ? -reversed : reversed; // questo punto qui devo approfondirlo
 }
 
+
+
 // Esempi di utilizzo
 console.log(reverseNumber(189)); // 981
 console.log(reverseNumber(-567)); // -765
 console.log(reverseNumber(1200)); // 21
+
+/* esercizio 6 extra Scrivi una funzione che accetti un numero positivo X come parametro.
+La funzione dovrebbe stampare a console una “scala” creata con il carattere “#” e avente X scalini. */
+function printStaircase(x) {
+    for (let i = 1; i <= x; i++) {
+        console.log("#".repeat(i));
+    }
+}
+
+// Esempi di utilizzo
+console.log("Scala con 3 scalini:");
+printStaircase(3);
+console.log("\nScala con 5 scalini:");
+printStaircase(5);
+console.log("\nScala con 7 scalini:");
+printStaircase(7);
 
     /* esrcizio 7 
     rea una funzione che, data una stringa come parametro, ritorni la stessa stringa, ma al contrario. Es. “Ciao” ****⇒ “oaiC”*/
@@ -366,3 +384,14 @@ function reverseString(str) {
 console.log(reverseString("Ciao")); // "oaiC"
 console.log(reverseString("Javascript")); // "tpircsavaJ"
 console.log(reverseString("12345")); // "54321"
+
+
+
+
+/* esercizio 9 extra
+ Scrivi una funzione che accetti un numero positivo X come parametro. 
+La funzione dovrebbe stampare a console una “piramide” create con il carattere “#” e avente X strati.
+*/
+
+
+}
